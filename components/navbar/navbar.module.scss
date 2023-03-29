@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+.nav {
+  padding: $spacer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .image {
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-left: $spacer;
+      color: $secondary-clr;
+      text-decoration: none;
+    }
+  }
+}
