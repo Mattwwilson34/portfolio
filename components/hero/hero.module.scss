@@ -1,0 +1,48 @@
+@import "variables";
+
+$my-variable: 1;
+
+.hero {
+  padding: $spacer;
+  margin: $spacer-lg auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h1 {
+    font-size: $fs-3;
+    line-height: $spacer-lg;
+    font-weight: $fw-b;
+    margin-bottom: $spacer;
+  }
+
+  .name {
+    font-size: $fs-2;
+    line-height: $spacer-lg;
+    font-weight: $fw-b;
+    margin-bottom: $spacer;
+
+    span {
+      --i: #{$my-variable};
+      position: relative;
+      display: inline-block;
+      font-size: 40px;
+      color: #fff;
+      text-transform: uppercase;
+      animation: flip 3s infinite;
+      animation-delay: calc(0.2s * var(--i));
+    }
+  }
+
+  h2 {
+    font-size: $fs-m;
+    line-height: $spacer-md;
+  }
+}
+
+@keyframes flip {
+  0%,
+  80% {
+    transform: rotateY(360deg);
+  }
+}
