@@ -1,0 +1,52 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap");
+
+/* font family */
+$ff: "Roboto Mono", monospace;
+
+// font weights
+$fw-n: 400;
+$fw-m: 600;
+$fw-b: 700;
+
+// font size
+$fs-2: 5rem;
+$fs-3: 2rem;
+$fs-p: 1rem;
+
+// colors
+$primary-clr: #181818;
+$secondary-clr: #f5f2e7;
+$accent-clr: #2666cf;
+$secondary-accent-clr: #5cb8e4;
+
+// spacing
+$spacer: 1rem;
+$spacer-md: calc($spacer * 2);
+$spacer-lg: calc($spacer * 3);
+
+// border radius
+$br: 5px;
+
+// box shadow
+$shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+  rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+html {
+  font-family: $ff;
+  background-color: $primary-clr;
+  color: $secondary-clr;
+}
+
+h1 {
+  font-size: $fs-2;
+  margin: $spacer;
+  border-radius: $br;
+  width: 500px;
+  box-shadow: $shadow;
+}
+
+h2 {
+  font-size: $fs-3;
+  color: $secondary-accent-clr;
+}
