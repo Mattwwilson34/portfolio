@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Navbar from "../components/navbar/Navbar"
 import Hero from "../components/hero/Hero"
+import SocialMediaMenu from "../components/social-media-menu/SocialMediaMenu"
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <main className="my-class">
         <Navbar />
+        <SocialMediaMenu />
         <section>
           <Hero />
         </section>

@@ -1,0 +1,40 @@
+@import "variables";
+
+.socialMediaMenu {
+  position: absolute;
+  top: 20%;
+  background-color: $secondary-clr;
+  padding: $spacer;
+  border-top-right-radius: $br;
+  border-bottom-right-radius: $br;
+  display: flex;
+  flex-direction: column;
+  gap: $spacer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.socialMediaMenuOpenButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 45px;
+  background-color: $secondary-clr;
+  opacity: 0.7;
+  position: fixed;
+  top: 6%;
+  border-top-right-radius: $br;
+  border-bottom-right-radius: $br;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.hidden {
+  transform: translateX(-100vw);
+}
+
+.visible {
+  transform: translateX(0);
+}
