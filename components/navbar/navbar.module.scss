@@ -3,7 +3,7 @@
 .nav {
   background-color: $primary-clr;
   border-bottom: 1px solid $accent-clr;
-  padding: $spacer;
+  padding: $spacer / 2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,12 +18,16 @@
   .image {
     display: flex;
     align-items: center;
+  }
 
-    a {
-      margin-left: $spacer;
-      color: $secondary-clr;
-      text-decoration: none;
-    }
+  a {
+    margin-left: $spacer;
+    color: $secondary-clr;
+    font-size: $fs-l;
+    text-decoration: none;
+    justify-self: flex-start;
+    margin: 0;
+    letter-spacing: 1px;
   }
 }
 
