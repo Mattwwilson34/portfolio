@@ -4,32 +4,30 @@ $my-variable: 1;
 
 .hero {
   padding: $spacer;
-  margin: $spacer-lg auto;
+  margin: $spacer-lg * 2 auto;
   display: flex;
   flex-direction: column;
   text-align: center;
 
-  h1 {
-    font-size: $fs-3;
-    line-height: $spacer-lg;
-    font-weight: $fw-b;
-    margin-bottom: $spacer;
+  #greet {
+    display: block;
   }
 
   .name {
     font-size: $fs-2;
-    line-height: $spacer-lg;
+    line-height: $spacer-md * 2;
     font-weight: $fw-b;
     margin-bottom: $spacer;
 
     span {
       --i: #{$my-variable};
+      white-space: pre;
       position: relative;
       display: inline-block;
       font-size: 40px;
       color: #fff;
       text-transform: uppercase;
-      animation: flip 3s 3;
+      animation: flip 2s 1;
       animation-delay: calc(0.2s * var(--i));
     }
   }
@@ -44,5 +42,38 @@ $my-variable: 1;
   0%,
   80% {
     transform: rotateY(360deg);
+  }
+}
+
+.subheader {
+  font-family: "Montserrat Medium";
+  max-width: 40ch;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+
+  span {
+    display: inline-block;
+    white-space: pre;
+    opacity: 0;
+    filter: blur(4px);
+  }
+
+  @for $i from 1 through 16 {
+    span:nth-child(#{$i}) {
+      animation: fade-in 0.8s #{$i / 10}s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    }
+  }
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
   }
 }
