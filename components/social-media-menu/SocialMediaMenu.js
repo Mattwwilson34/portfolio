@@ -9,7 +9,7 @@ import closeChevron from "../../public/ arrow-circle-left.svg"
 import styles from "./social-media-menu.module.scss"
 
 function SocialMediaMenu() {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   return (
     <>
@@ -17,7 +17,11 @@ function SocialMediaMenu() {
         className={styles.socialMediaMenuOpenButton}
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Image src={isOpen ? closeChevron : openChevron} alt="Open menu" />
+        <Image
+          src={isOpen ? closeChevron : openChevron}
+          color="#181818"
+          alt="Open menu"
+        />
       </div>
       <ul
         className={
@@ -28,17 +32,17 @@ function SocialMediaMenu() {
       >
         <li className={styles.socialMediaMenuItem}>
           <a href="https://www.linkedin.com/in/mattwwilson/">
-            <Image src={linkedin} alt="Linkedin" />
+            <Image src={linkedin} color="#181818" alt="Linkedin" />
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>
           <a href="https://github.com/Mattwwilson34">
-            <Image src={github} alt="Github" />
+            <Image src={github} color="#181818" alt="Github" />
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>
           <a href="../../public/matt_wilson_resume.pdf">
-            <Image src={resume} alt="Resume" />
+            <Image src={resume} color="#181818" alt="Resume" />
           </a>
         </li>
       </ul>
