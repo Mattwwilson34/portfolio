@@ -17,6 +17,7 @@ function SocialMediaMenu() {
     const scrollingDown = currentScrollY > prevScrollY.current
     if (scrollingDown && currentScrollY > 100) {
       setIsVisible(false)
+      setIsOpen(false)
     }
     else {
       setIsVisible(true)
