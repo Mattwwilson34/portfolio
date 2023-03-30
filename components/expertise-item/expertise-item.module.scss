@@ -1,0 +1,62 @@
+@import "variables";
+
+.expertiseItem {
+  padding: $spacer;
+  margin: $spacer-md auto;
+  width: 300px;
+  border: 2px solid $secondary-clr;
+  border-radius: $br;
+
+  .header {
+    display: flex;
+    gap: $spacer;
+    margin-bottom: $spacer;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    position: relative;
+  }
+
+  .title::before {
+    /* Highlight color */
+    background-color: $accent-clr;
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+    border-radius: $br;
+  }
+
+  .description::before {
+    content: "<p>";
+    opacity: 0.7;
+    display: block;
+    margin-bottom: $spacer;
+    margin-left: $spacer-md * -1;
+  }
+
+  .description::after {
+    opacity: 0.7;
+    content: "</p>";
+    display: block;
+    margin-top: $spacer;
+    margin-left: $spacer-md * -1;
+  }
+
+  .description {
+    padding-left: $spacer-md;
+    line-height: 1.5;
+  }
+
+  .description::selection {
+    background-color: $accent-clr;
+    color: $primary-clr;
+  }
+}
