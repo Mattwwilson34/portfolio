@@ -4,8 +4,17 @@ function generateNameCharArray() {
   const name = "MATT WILSON"
   return name.split('')
 }
+
+function generateWordArray() {
+  const words =
+    "A Full-Stack web developer who enjoys exploring new technologies and discovering innovative solutions to real-world problems."
+    return words.split(' ')
+}
+
 function Hero() {
   const charArray = generateNameCharArray()
+  const wordArray = generateWordArray()
+
   return (
     <div className={styles.hero}>
       <h1 className={styles.name}>
@@ -19,9 +28,14 @@ function Hero() {
         })}
       </h1>
 
-      <h2>
-        A Full-Stack web developer who enjoys exploring new technologies and
-        discovering innovative solutions to real-world problems.
+      <h2 className={styles.subheader}>
+        {wordArray.map((word, index) => {
+          return (
+            <span className={styles.word} key={index}> 
+              {` ${word}`}
+            </span>
+          )
+        })}
       </h2>
     </div>
   )
