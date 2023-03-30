@@ -1,9 +1,19 @@
-@import 'variables';
+@import "variables";
 
 .button {
   display: block;
   font-size: $fs-l;
   margin: 0 auto;
-  padding: $spacer $spacer * 3; 
+  padding: $spacer $spacer * 3;
   border-radius: $br;
+  background-color: transparent;
+  color: $secondary-clr;
+  border: 1px solid $accent-clr;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    color: $accent-clr;
+    cursor: pointer;
+  }
 }
