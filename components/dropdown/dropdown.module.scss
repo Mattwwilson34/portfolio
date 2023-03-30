@@ -4,20 +4,21 @@
   position: absolute;
   width: 250px;
   top: 82px;
-  background-color: $lighter-primary-clr;
+  background-color: $secondary-clr;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: $spacer;
   padding: $spacer;
-  border-radius: $br;
+  border-top-left-radius: $br;
+  border-bottom-left-radius: $br;
   transition: all 0.3s ease-in-out;
 
   a {
     font-size: $fs-m;
     text-decoration: none;
-    color: $secondary-clr;
+    color: $primary-clr;
 
     &:hover {
       color: blue;
@@ -26,7 +27,7 @@
 }
 
 .visible {
-  transform: translateX(25vw);
+  transform: translateX(30vw);
 }
 
 .hidden {
