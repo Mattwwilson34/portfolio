@@ -11,6 +11,21 @@ body {
   padding-top: $max-nav-height;
 }
 
+section {
+  min-height: 100vh;
+  border-bottom: 1px solid $accent-clr;
+  padding: $spacer;
+}
+
+h2 {
+  font-size: $fs-l;
+}
+
+h3 {
+  font-size: $fs-l;
+  font-weight: $fw-m;
+}
+
 a:hover {
   cursor: pointer;
 }
