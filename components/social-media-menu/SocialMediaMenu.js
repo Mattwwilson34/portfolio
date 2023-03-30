@@ -1,20 +1,41 @@
-import React, { useState } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import github from "../../public/github.svg"
 import linkedin from "../../public/linkedin.svg"
 import resume from "../../public/resume.svg"
-import close from "../../public/close-x.svg"
 import openChevron from "../../public/arrow-circle-right.svg"
 import closeChevron from "../../public/ arrow-circle-left.svg"
 import styles from "./social-media-menu.module.scss"
 
 function SocialMediaMenu() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isVisible, setIsVisible] = useState(true)
+  const prevScrollY = useRef(0)
+
+  function handleNavbarVisibility() {
+    const currentScrollY = window.scrollY
+    const scrollingDown = currentScrollY > prevScrollY.current
+    if (scrollingDown && currentScrollY > 100) {
+      setIsVisible(false)
+    }
+    else {
+      setIsVisible(true)
+    }
+    prevScrollY.current = currentScrollY
+
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleNavbarVisibility)
+    return () => {
+      window.removeEventListener("scroll", handleNavbarVisibility)
+    }
+  }, [])
 
   return (
     <>
       <div
-        className={styles.socialMediaMenuOpenButton}
+        className={`${styles.socialMediaMenuOpenButton} ${isVisible ? '' : styles.buttonHidden}`}
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image
