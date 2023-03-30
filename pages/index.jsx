@@ -22,7 +22,7 @@ export default function Home() {
         <SocialMediaMenu />
         <section>
           <Hero />
-          <Button text="Projects" />
+          <Button text="My Work" />
         </section>
         <section>
           <h2>Expertise</h2>
