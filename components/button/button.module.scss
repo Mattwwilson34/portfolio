@@ -1,0 +1,9 @@
+@import 'variables';
+
+.button {
+  display: block;
+  font-size: $fs-l;
+  margin: 0 auto;
+  padding: $spacer $spacer * 3; 
+  border-radius: $br;
+}
