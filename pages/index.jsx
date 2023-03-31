@@ -22,11 +22,11 @@ export default function Home() {
       <main>
         <Navbar />
         <SocialMediaMenu />
-        <section>
+        <section id="hero">
           <Hero />
           <Button text="My Work" />
         </section>
-        <section>
+        <section id="expertise">
           <h2>Expertise</h2>
           <Expertise
             title="Software Development"
@@ -44,7 +44,7 @@ export default function Home() {
             image={backendDev}
           />
         </section>
-        <section>
+        <section id="projects">
           <h2>Projects</h2>
           <Projects />
         </section>
