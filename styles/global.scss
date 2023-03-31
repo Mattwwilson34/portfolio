@@ -5,6 +5,7 @@ html {
   background-color: $primary-clr;
   color: $secondary-clr;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
