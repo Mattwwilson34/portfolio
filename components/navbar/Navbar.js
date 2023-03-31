@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef} from "react"
 import { Divide as Hamburger } from "hamburger-react"
-import ProfileCircle from "../profile-circle/ProfileCircle"
+// import ProfileCircle from "../profile-circle/ProfileCircle"
 import Dropdown from "../dropdown/Dropdown"
 import styles from "./navbar.module.scss"
 
@@ -33,7 +33,7 @@ function Navbar() {
     <nav className={`${styles.nav} ${isVisible ? '' : styles.navHidden}`}>
       <div className={styles.image}>
         {/* <ProfileCircle /> */}
-        <a href="#">Matt Wilson._</a>
+        <a className={styles.nameLink} href="#">Matt Wilson._</a>
       </div>
       <Hamburger
         label="Show menu"
