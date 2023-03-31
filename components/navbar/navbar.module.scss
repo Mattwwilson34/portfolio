@@ -28,6 +28,10 @@
     justify-self: flex-start;
     margin: 0;
     letter-spacing: 1px;
+
+    span {
+      color: $accent-clr;
+    }
   }
 }
 
