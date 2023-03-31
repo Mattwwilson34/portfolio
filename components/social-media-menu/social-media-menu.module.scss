@@ -14,24 +14,14 @@
   z-index: 100;
 }
 
-.socialMediaMenuOpenButton {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45px;
-  width: 45px;
-  background-color: $secondary-clr;
-  opacity: 0.5;
+.socialMediaBtn {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   position: fixed;
   top: 12%;
-  border-top-right-radius: $br;
-  border-bottom-right-radius: $br;
-  z-index: 100;
-  transition: opacity 0.3s ease-in-out;
+}
 
-  &:hover {
-    opacity: 1;
-  }
+.rotate {
+  transform: rotate(180deg);
 }
 
 .hidden {

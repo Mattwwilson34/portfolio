@@ -3,9 +3,8 @@ import Image from "next/image"
 import github from "../../public/github.svg"
 import linkedin from "../../public/linkedin.svg"
 import resume from "../../public/resume.svg"
-import openChevron from "../../public/arrow-circle-right.svg"
-import closeChevron from "../../public/ arrow-circle-left.svg"
 import styles from "./social-media-menu.module.scss"
+import openSocial from "../../public/open-social.svg"
 
 function SocialMediaMenu() {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,12 +17,10 @@ function SocialMediaMenu() {
     if (scrollingDown && currentScrollY > 100) {
       setIsVisible(false)
       setIsOpen(false)
-    }
-    else {
+    } else {
       setIsVisible(true)
     }
     prevScrollY.current = currentScrollY
-
   }
 
   useEffect(() => {
@@ -35,16 +32,15 @@ function SocialMediaMenu() {
 
   return (
     <>
-      <div
-        className={`${styles.socialMediaMenuOpenButton} ${isVisible ? '' : styles.buttonHidden}`}
+      <Image
+        src={openSocial}
+        alt="Open menu"
+        width={48}
+        className={`${styles.socialMediaBtn} ${isOpen ? styles.rotate : ""} ${
+          isVisible ? "" : styles.buttonHidden
+        }`}
         onClick={() => setIsOpen(!isOpen)}
-      >
-        <Image
-          src={isOpen ? closeChevron : openChevron}
-          color="#181818"
-          alt="Open menu"
-        />
-      </div>
+      />
       <ul
         className={
           isOpen
@@ -53,17 +49,25 @@ function SocialMediaMenu() {
         }
       >
         <li className={styles.socialMediaMenuItem}>
-          <a href="https://www.linkedin.com/in/mattwwilson/">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.linkedin.com/in/mattwwilson/"
+          >
             <Image src={linkedin} color="#181818" alt="Linkedin" />
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>
-          <a href="https://github.com/Mattwwilson34">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://github.com/Mattwwilson34"
+          >
             <Image src={github} color="#181818" alt="Github" />
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>
-          <a href="../../public/matt_wilson_resume.pdf">
+          <a target="_blank" rel="noopener" href="/matt_wilson_resume.pdf">
             <Image src={resume} color="#181818" alt="Resume" />
           </a>
         </li>
