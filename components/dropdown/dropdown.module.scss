@@ -2,7 +2,7 @@
 
 .dropdown {
   position: absolute;
-  width: 250px;
+  width: 400px;
   top: 82px;
   background-color: $secondary-clr;
   overflow: hidden;
@@ -27,7 +27,7 @@
 }
 
 .visible {
-  transform: translateX(30vw);
+  transform: translateX(50vw);
 }
 
 .hidden {
