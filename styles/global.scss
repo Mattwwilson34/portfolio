@@ -15,6 +15,12 @@ section {
   min-height: 100vh;
   border-bottom: 1px solid $accent-clr;
   padding: $spacer;
+
+  h2 {
+    font-size: $fs-2;
+    font-weight: $fw-b;
+    text-align: center;
+  }
 }
 
 h2 {
