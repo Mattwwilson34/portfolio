@@ -3,7 +3,6 @@
 .expertiseItem {
   padding: $spacer;
   margin: $spacer-md auto;
-  width: 300px;
   border: 2px solid $secondary-clr;
   border-radius: $br;
 
@@ -52,7 +51,6 @@
 
   .description {
     padding-left: $spacer-md;
-    line-height: 1.5;
   }
 
   .description::selection {

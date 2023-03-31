@@ -1,0 +1,39 @@
+@import "variables";
+
+.href {
+  text-decoration: none;
+  color: $secondary-clr;
+}
+.educationItem {
+  margin: $spacer-lg 0;
+  padding: $spacer;
+  border: 2px dashed $secondary-clr;
+  border-radius: $br;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+    border: 2px solid $accent-clr;
+    transform: scale(1.01) translateY(-2px);
+  }
+
+  h3 {
+    margin-bottom: $spacer;
+  }
+
+
+  h4 {
+    font-size: $fs-m;
+    font-weight: $fw-b;
+    margin: $spacer 0;
+  }
+
+  ul {
+    display: grid;
+    grid: auto / repeat(3, 1fr);
+  }
+
+  li {
+    margin: $spacer / 4 0;
+  }
+}
