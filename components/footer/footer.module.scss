@@ -1,0 +1,37 @@
+@import "variables";
+.footer {
+  display: grid;
+  grid: auto / 1fr 1fr;
+  padding: $spacer;
+
+
+  .listHeader {
+    font-size: $fs-m;
+    font-weight: $fw-b;
+  }
+
+  ul {
+    li {
+      margin: $spacer 0;
+    }
+  }
+
+  a {
+    color: $secondary-clr;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: $accent-clr;
+    }
+  }
+
+  .copywrite {
+    margin-top: $spacer;
+    grid-column: span 2;
+
+    span {
+      font-size: $fs-l;
+    }
+  }
+}
