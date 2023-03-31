@@ -31,17 +31,17 @@ export default function Home() {
           <h2>Expertise</h2>
           <Expertise
             title="Software Development"
-            description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+            description="Experienced in the following languages: TypeScript, Javascript, Python, SQL."
             image={softwareDev}
           />
           <Expertise
             title="Frontend Dev React, NextJS"
-            description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+            description="Passionate UI/UX. With 2 years of development experience in HTML, CSS, JS, SASS, React, and NextJS."
             image={react}
           />
           <Expertise
             title="Backend Dev NodeJS, Flask"
-            description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
+            description="Skilled in developing RESTful APIs, Microservices, and Data Pipelines using NodeJS, Flask, PostgreSQL, and MongoDB."
             image={backendDev}
           />
         </section>
@@ -49,7 +49,6 @@ export default function Home() {
           <h2>Projects</h2>
           <Projects />
         </section>
-          <Footer />
         <section id="education">
           <h2>Education</h2>
           <Education />
