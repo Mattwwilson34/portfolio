@@ -8,6 +8,7 @@ import softwareDev from "../public/expertise-software-dev.svg"
 import react from "../public/expertise-react.svg"
 import backendDev from "../public/expertise-backend.svg"
 import Projects from "../components/projects/Projects"
+import Footer from '../components/footer/Footer'
 
 export default function Home() {
   return (
@@ -47,6 +48,7 @@ export default function Home() {
           <h2>Projects</h2>
           <Projects />
         </section>
+          <Footer />
       </main>
     </>
   )
