@@ -4,9 +4,10 @@ import Hero from "../components/hero/Hero"
 import SocialMediaMenu from "../components/social-media-menu/SocialMediaMenu"
 import Button from "../components/button/Button"
 import Expertise from "../components/expertise-item/ExpertiseItem"
-import softwareDev from '../public/expertise-software-dev.svg'
-import react from '../public/expertise-react.svg'
-import backendDev from '../public/expertise-backend.svg'
+import softwareDev from "../public/expertise-software-dev.svg"
+import react from "../public/expertise-react.svg"
+import backendDev from "../public/expertise-backend.svg"
+import Projects from "../components/projects/Projects"
 
 export default function Home() {
   return (
@@ -41,6 +42,10 @@ export default function Home() {
             description="Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
             image={backendDev}
           />
+        </section>
+        <section>
+          <h2>Projects</h2>
+          <Projects />
         </section>
       </main>
     </>

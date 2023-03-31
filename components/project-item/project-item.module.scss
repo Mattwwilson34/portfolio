@@ -1,0 +1,109 @@
+@import "variables";
+
+.item {
+  border-radius: $br;
+  margin: $spacer-lg 0;
+  padding-bottom: $spacer;
+  border: 1px solid $accent-clr;
+
+  .imageContainer {
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: $br;
+      border-top-right-radius: $br;
+      filter: brightness(0.8);
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+        filter: brightness(1);
+      }
+    }
+  }
+
+  h3 {
+    padding: $spacer;
+  }
+
+  p {
+    padding: 0 $spacer $spacer $spacer;
+  }
+
+  button {
+    display: block;
+    margin: 0 auto;
+    color: $secondary-clr;
+    opacity: 0.8;
+    background-color: transparent;
+    font-size: $fs-m;
+    border: none;
+  }
+
+  .dropDownArrow {
+    display: block;
+    margin: 0 auto;
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .techDrawer {
+    transition: max-height 0.5s linear;
+    padding: 0 $spacer ;
+    display: grid;
+    grid: auto / repeat(auto-fit, minmax(100px, 1fr));
+
+    h4 {
+      position: relative;
+      font-size: $fs-m;
+      font-weight: $fw-b;
+      margin-bottom: $spacer / 2;
+      color: $primary-clr;
+    }
+
+    h4::before {
+    /* Highlight color */
+    background-color: $accent-clr;
+
+    content: "";
+    position: absolute;
+    width: calc(80% + 4px);
+    height: 110%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+    border-radius: $br;
+    opacity: 0.8;
+    }
+  }
+
+  .drawerClosed{
+    overflow: hidden;
+    max-height: 0;
+  }
+
+  .drawerOpen {
+    overflow: hidden;
+    max-height: 100px;
+  }
+
+  .techSection {
+    li {
+      margin-bottom: $spacer / 2;
+    }
+  } 
+
+}
+
