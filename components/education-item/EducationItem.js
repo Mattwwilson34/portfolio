@@ -8,7 +8,7 @@ function EducationItem({ education }) {
       <div className={styles.educationItem}>
         <h3>{title}</h3>
         <p>{description}</p>
-        <h4>Curriculum Tech:</h4>
+        <h4>Curriculum:</h4>
         <ul>
           {tech.map((item, index) => (
             <li className={styles.listItem} key={index}>
