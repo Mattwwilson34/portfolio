@@ -32,19 +32,19 @@ function ProjectItem({ title, description, technologies }) {
         <div className={styles.techSection}>
           <h4>Client</h4>
           <ul>
-            {client.map(tech => <li>{tech}</li>)}
+            {client.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
         <div className={styles.techSection}>
           <h4>Server</h4>
           <ul>
-            {server.map(tech => <li>{tech}</li>)}
+            {client.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
         <div className={styles.techSection}>
           <h4>Data</h4>
           <ul>
-            {database.map(tech => <li>{tech}</li>)}
+            {client.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
       </div>
