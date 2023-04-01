@@ -15,12 +15,23 @@
     cursor: pointer;
     border: 2px solid $accent-clr;
     transform: scale(1.01) translateY(-2px);
+    --_p: 100%
   }
 
   h3 {
     margin-bottom: $spacer;
-  }
+    display: inline-block;
 
+    --s: 0.5em; /* the thickness of the line */
+    --c: #2c4bff; /* the color */
+
+    background: linear-gradient(90deg, var(--c) 50%, #000 0)
+        calc(100% - var(--_p, 20%)) / 200% 100%,
+      linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 20%) var(--s) no-repeat;
+    -webkit-background-clip: text, padding-box;
+    background-clip: text, padding-box;
+    transition: 0.5s;
+  }
 
   h4 {
     font-size: $fs-m;
@@ -35,5 +46,6 @@
 
   li {
     margin: $spacer / 4 0;
+    opacity: $fo;
   }
 }
