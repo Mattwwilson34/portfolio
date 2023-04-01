@@ -1,7 +1,10 @@
 import styles from "./expertise-item.module.scss"
 import Image from "next/image"
 
-function ExpertiseItem({ title, description, image }) {
+function ExpertiseItem({expertise}) {
+
+  const { title, description, image } = expertise
+
   return (
     <div className={styles.expertiseItem}>
       <div className={styles.header}>
