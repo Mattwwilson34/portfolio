@@ -32,6 +32,7 @@ function SocialMediaMenu() {
 
   return (
     <>
+      <div className={`${styles.socialMediaBtnContainer} ${isVisible ? "" : styles.buttonHidden}`}>
       <Image
         src={openSocial}
         alt="Open menu"
@@ -41,6 +42,7 @@ function SocialMediaMenu() {
         }`}
         onClick={() => setIsOpen(!isOpen)}
       />
+      </div>
       <ul
         className={
           isOpen
@@ -54,7 +56,7 @@ function SocialMediaMenu() {
             rel="noopener"
             href="https://www.linkedin.com/in/mattwwilson/"
           >
-            <Image src={linkedin} color="#181818" alt="Linkedin" />
+            <Image src={linkedin} alt="Linkedin"/>
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>
