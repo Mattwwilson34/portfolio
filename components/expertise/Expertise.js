@@ -5,7 +5,7 @@ import react from "../../public/expertise-react.svg"
 import backendDev from "../../public/expertise-backend.svg"
 
 const expertise1 = {
-  title: 'Software Development',
+  title: 'Software',
   description: 'Experience with React, Redux, Next.js, Gatsby, Styled Components, Tailwind CSS, Material UI, Bootstrap, and more.',
   image: softwareDev
 }
