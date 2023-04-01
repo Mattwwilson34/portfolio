@@ -17,11 +17,14 @@
 
   a {
     font-size: $fs-m;
+    font-weight: $fw-b;
     text-decoration: none;
     color: $primary-clr;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: blue;
+      transform: translateY(-2px);
     }
   }
 }
