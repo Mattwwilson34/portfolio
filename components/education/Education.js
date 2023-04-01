@@ -43,15 +43,14 @@ const education3 = {
     "A 1-month course that builds a strong foundation in SQL. It teaches complex queries, data analysis, table and database creation, and Python integration.",
   href: "https://www.udemy.com/course/the-complete-sql-bootcamp/",
   tech: [
-    "JOINs",
-    "WHERE",
-    "GROUP",
-    "Aggregate",
+    "Queries",
+    "Agg funcs",
+    "Indexing",
+    "Security",
+    "Joins",
     "Subqueries",
-    "UNIONs",
-    "Indexes",
+    "Views",
     "Constraints",
-    "Transactions",
   ],
 }
 
