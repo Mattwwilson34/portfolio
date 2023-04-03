@@ -5,7 +5,7 @@
   margin: $spacer-md auto;
   border: 2px solid $secondary-clr;
   border-radius: $br;
-  max-width: 400px;
+  width: clamp(330px, 100vw, 450px);
 
   .header {
     display: flex;
@@ -15,8 +15,17 @@
     justify-content: space-between;
   }
 
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: clamp(75px, 15vw, 100px);
+    height: clamp(75px, 15vh, 100px);
+  }
+
   .title {
     position: relative;
+    margin: 0 auto;
+    font-size: clamp(min(10vw, 2rem), 10vw, $fs-2);
   }
 
   .title::before {
@@ -52,6 +61,7 @@
 
   .description {
     padding-left: $spacer-md;
+    font-size: clamp($fs-p, 5vw, $fs-l);
   }
 
   .description::selection {
