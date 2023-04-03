@@ -12,7 +12,7 @@
     gap: $spacer;
     margin-bottom: $spacer;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
 
   img {
@@ -24,8 +24,7 @@
 
   .title {
     position: relative;
-    margin: 0 auto;
-    font-size: clamp(min(10vw, 2rem), 10vw, $fs-2);
+    font-size: 1.75rem;
   }
 
   .title::before {
@@ -61,7 +60,7 @@
 
   .description {
     padding-left: $spacer-md;
-    font-size: clamp($fs-p, 5vw, $fs-l);
+    font-size: 1.25rem;
   }
 
   .description::selection {
