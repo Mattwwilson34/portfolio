@@ -25,15 +25,15 @@ export default function Home() {
           <Button text="My Work" />
         </section>
         <section id="expertise">
-          <h2>Expertise</h2>
+          <h2>My Expertise</h2>
           <Expertise />
         </section>
         <section id="projects">
-          <h2>Projects</h2>
+          <h2>My Work</h2>
           <Projects />
         </section>
         <section id="education">
-          <h2>Education</h2>
+          <h2>My Education</h2>
           <Education />
         </section>
         <Footer />
