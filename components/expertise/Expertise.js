@@ -5,20 +5,20 @@ import react from "../../public/expertise-react.svg"
 import backendDev from "../../public/expertise-backend.svg"
 
 const expertise1 = {
-  title: 'Software',
-  description: 'Experience with React, Redux, Next.js, Gatsby, Styled Components, Tailwind CSS, Material UI, Bootstrap, and more.',
+  title: 'Software Development',
+  description: 'Experienced in the following languages: TypeScript, JavaScript, Python, C, SQL',
   image: softwareDev
 }
 
 const expertise2 = {
-  title: 'Frontend',
-  description: 'Experience with React, Redux, Next.js, Gatsby, Styled Components, Tailwind CSS, Material UI, Bootstrap, and more.',
+  title: 'Frontend Dev React, NextJS',
+  description: 'Passionate about UI/UX. Over 1.5 years of development experience in HTML, CSS, JS, React, and NextJS frameworks.',
   image: react
 }
 
 const expertise3 = {
-  title: 'Backend',
-  description: 'Experience with React, Redux, Next.js, Gatsby, Styled Components, Tailwind CSS, Material UI, Bootstrap, and more.',
+  title: 'Backend Dev NodeJS, Flask',
+  description: 'Skilled in developing scallbale and secure backend services: NodeJS, Flask, PostGresSQL, MongoDB.',
   image: backendDev
 }
 
