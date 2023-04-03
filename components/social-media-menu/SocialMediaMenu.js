@@ -23,6 +23,22 @@ function SocialMediaMenu() {
     prevScrollY.current = currentScrollY
   }
 
+  function closeMenuOnClickAway(e) {
+    e.stopPropagation()
+    let socialMenuElement = false;
+
+    e.target.classList.forEach((className) => {
+      if (className.includes('social')) {
+        socialMenuElement = true;
+        return;
+      }
+    })
+
+    if (!socialMenuElement) {
+      setIsOpen(false)
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleNavbarVisibility)
     return () => {
@@ -30,18 +46,29 @@ function SocialMediaMenu() {
     }
   }, [])
 
+  useEffect(() => {
+    window.addEventListener("click", closeMenuOnClickAway)
+    return () => {
+      window.addEventListener("click", closeMenuOnClickAway)
+    }
+  }, [])
+
   return (
     <>
-      <div className={`${styles.socialMediaBtnContainer} ${isVisible ? "" : styles.buttonHidden}`}>
-      <Image
-        src={openSocial}
-        alt="Open menu"
-        width={48}
-        className={`${styles.socialMediaBtn} ${isOpen ? styles.rotate : ""} ${
+      <div
+        className={`${styles.socialMediaBtnContainer} ${
           isVisible ? "" : styles.buttonHidden
         }`}
-        onClick={() => setIsOpen(!isOpen)}
-      />
+      >
+        <Image
+          src={openSocial}
+          alt="Open menu"
+          width={48}
+          className={`${styles.socialMediaBtn} ${isOpen ? styles.rotate : ""} ${
+            isVisible ? "" : styles.buttonHidden
+          }`}
+          onClick={() => setIsOpen(!isOpen)}
+        />
       </div>
       <ul
         className={
@@ -56,7 +83,7 @@ function SocialMediaMenu() {
             rel="noopener"
             href="https://www.linkedin.com/in/mattwwilson/"
           >
-            <Image src={linkedin} alt="Linkedin"/>
+            <Image src={linkedin} alt="Linkedin" />
           </a>
         </li>
         <li className={styles.socialMediaMenuItem}>

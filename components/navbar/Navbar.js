@@ -21,10 +21,34 @@ function Navbar() {
     prevScrollY.current = currentScrollY
   }
 
+  function closeMenuOnClickAway(e) {
+    e.stopPropagation()
+
+    let dropdownMenuElement = false
+
+    e.target.classList.forEach((className) => {
+      if (className.includes("dropdown") || className.includes("hamburger")) {
+        dropdownMenuElement = true
+        return
+      }
+    })
+
+    if (!dropdownMenuElement) {
+      setOpen(false)
+    }
+  }
+
   useEffect(() => {
     window.addEventListener("scroll", handleNavbarVisibility)
     return () => {
       window.removeEventListener("scroll", handleNavbarVisibility)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener("click", closeMenuOnClickAway)
+    return () => {
+      window.addEventListener("click", closeMenuOnClickAway)
     }
   }, [])
 
@@ -43,13 +67,27 @@ function Navbar() {
         toggle={setOpen}
       />
       <Dropdown isOpen={isOpen}>
-        <a href="#">Home</a>
-        <a href="#expertise">Expertise</a>
-        <a href="#projects">Projects</a>
-        <a target="_blank" rel="noopener" href="/matt_wilson_resume.pdf">
+        <a href="#" className={styles.dropdownItem}>
+          Home
+        </a>
+        <a href="#expertise" className={styles.dropdownItem}>
+          Expertise
+        </a>
+        <a href="#projects" className={styles.dropdownItem}>
+          Projects
+        </a>
+        <a
+          target="_blank"
+          rel="noopener"
+          href="/matt_wilson_resume.pdf"
+          className={styles.dropdownItem}
+        >
           Resume
         </a>
-        <a href="mailto:matt@mattwwilson.com?subject=Hello%20from%20[Your%20Name]&body=Hi%20[Recipient],%0A%0AI%20found%20your%20website%20and%20wanted%20to%20reach%20out%20to%20you.%20[Add%20your%20message%20here.]">
+        <a
+          href="mailto:matt@mattwwilson.com?subject=Hello%20from%20[Your%20Name]&body=Hi%20[Recipient],%0A%0AI%20found%20your%20website%20and%20wanted%20to%20reach%20out%20to%20you.%20[Add%20your%20message%20here.]"
+          className={styles.dropdownItem}
+        >
           Contact
         </a>
       </Dropdown>
