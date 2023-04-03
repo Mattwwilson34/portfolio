@@ -14,14 +14,19 @@ body {
 
 section {
   min-height: 100vh;
-  border-bottom: 1px solid $accent-clr;
   padding: $spacer;
 
   h2 {
-    font-size: $fs-2;
+    font-size: $fs-1;
     font-weight: $fw-b;
     text-align: center;
   }
+}
+
+section:nth-of-type(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h2 {
