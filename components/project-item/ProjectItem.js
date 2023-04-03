@@ -8,12 +8,14 @@ import dropUpArrow from "../../public/arrow-drop-up.svg"
 function ProjectItem({ title, description, technologies }) {
   const [isOpen, setIsOpen] = useState(false)
 
-  const { client, server, database } = technologies
+  const { client, server, database, image, href } = technologies
 
   return (
     <li className={styles.item}>
       <div className={styles.imageContainer}>
-        <Image src={fb} alt="Facebook" />
+        <a href={href} target="_blank">
+        <Image src={image} alt="Facebook" />
+        </a>
       </div>
       <h3>{title}</h3>
       <p>{description}</p>
@@ -38,13 +40,13 @@ function ProjectItem({ title, description, technologies }) {
         <div className={styles.techSection}>
           <h4>Server</h4>
           <ul>
-            {client.map((tech, index) => <li key={index}>{tech}</li>)}
+            {server.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
         <div className={styles.techSection}>
           <h4>Data</h4>
           <ul>
-            {client.map((tech, index) => <li key={index}>{tech}</li>)}
+            {database.map((tech, index) => <li key={index}>{tech}</li>)}
           </ul>
         </div>
       </div>

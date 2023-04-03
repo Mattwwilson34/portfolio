@@ -47,6 +47,10 @@
     display: block;
     margin: 0 auto;
     animation: bounce 1.5s infinite;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   @keyframes bounce {
@@ -98,7 +102,7 @@
 
   .drawerOpen {
     overflow: hidden;
-    max-height: 100px;
+    max-height: 120px;
   }
 
   .techSection {
