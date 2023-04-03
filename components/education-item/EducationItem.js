@@ -8,6 +8,7 @@ function EducationItem({ education }) {
       <div className={styles.educationItem}>
         <h3>{title}</h3>
         <p>{description}</p>
+        <div className={styles. curriculumContainer}>
         <h4>Curriculum:</h4>
         <ul>
           {tech.map((item, index) => (
@@ -16,6 +17,7 @@ function EducationItem({ education }) {
             </li>
           ))}
         </ul>
+        </div>
       </div>
     </a>
   )

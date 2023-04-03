@@ -5,22 +5,24 @@
   color: $secondary-clr;
 }
 .educationItem {
-  margin: $spacer-lg 0;
+  margin: $spacer-lg auto;
   padding: $spacer;
   border: 2px dashed $secondary-clr;
   border-radius: $br;
   transition: all 0.2s ease-in-out;
+  width: min(90vw, 600px);
 
   &:hover {
     cursor: pointer;
     border: 2px solid $accent-clr;
     transform: scale(1.01) translateY(-2px);
-    --_p: 100%
+    --_p: 100%;
   }
 
   h3 {
     margin-bottom: $spacer;
     display: inline-block;
+    width: max-content;
 
     --s: 0.5em; /* the thickness of the line */
     --c: #2c4bff; /* the color */
@@ -47,5 +49,18 @@
   li {
     margin: $spacer / 4 0;
     opacity: $fo;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .educationItem {
+    margin: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .curriculumContainer {
+    margin-top: auto;
   }
 }

@@ -74,12 +74,12 @@ const education4 = {
 
 function Education() {
   return (
-    <>
+    <div className={styles.education}>
       <EducationItem education={education1} />
       <EducationItem education={education2} />
       <EducationItem education={education3} />
       <EducationItem education={education4} />
-    </>
+    </div>
   )
 }
 

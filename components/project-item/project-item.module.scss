@@ -2,9 +2,10 @@
 
 .item {
   border-radius: $br;
-  margin: $spacer-lg 0;
+  margin: $spacer-lg auto;
   padding-bottom: $spacer;
   border: 1px solid $accent-clr;
+  width: min(90vw, 600px);
 
   .imageContainer {
     overflow: hidden;

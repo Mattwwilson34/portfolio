@@ -36,3 +36,15 @@
 .hidden {
   transform: translateX(150vw);
 }
+
+@media screen and (min-width: 768px) {
+  .visible {
+    transform: translateX(75vw);
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .visible {
+    transform: translateX(85vw);
+  }
+}

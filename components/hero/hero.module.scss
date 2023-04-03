@@ -14,7 +14,7 @@ $my-variable: 1;
   }
 
   .name {
-    font-size: $fs-2;
+    font-size: clamp($fs-2, 10vw, $fs-1);
     line-height: $spacer-md * 2;
     font-weight: $fw-b;
     margin-bottom: $spacer;
@@ -24,7 +24,7 @@ $my-variable: 1;
       white-space: pre;
       position: relative;
       display: inline-block;
-      font-size: 40px;
+    font-size: clamp(38px, 10vw, $fs-1);
       color: #fff;
       text-transform: uppercase;
       animation: flip 2s 1;

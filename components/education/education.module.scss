@@ -1,0 +1,15 @@
+@import "variables";
+
+@media screen and (min-width: 768px) {
+  .education {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: $spacer-lg;
+    gap: $spacer;
+
+    &educationItem {
+      margin: 0;
+    }
+  }
+}
