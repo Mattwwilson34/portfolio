@@ -23,6 +23,7 @@ export default function Home() {
           property="og:image"
           content="https://mattwwilson.com/og-image-thumbnail.png"
         />
+        <meta property="og:url" content="https://mattwwilson.com/" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
