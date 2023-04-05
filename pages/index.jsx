@@ -14,6 +14,12 @@ export default function Home() {
       <Head>
         <title>Matt Wilson</title>
         <meta name="description" content="Matt Wilson's Portfolio." />
+        <meta property="og:title" content="Matt Wilson's Porfolio" />
+        <meta
+          property="og:description"
+          content="My portfolio website showcases my skills and experience as a full stack web developer and designer. I've created a modern and minimalist design that emphasizes the visuals and descriptions of my work."
+        />
+        <meta property="og:image" content="../public/og-image-thumbnail.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
